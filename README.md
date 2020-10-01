@@ -6,6 +6,7 @@
     - run "npm install" in root folder
     - run "npm test"
     - verify output is not error
+    - if you have problems contact fbl@netcompany.com
 
 - recommended
     - install Visual Studio Code
