@@ -1,0 +1,289 @@
+<html>
+
+<head>
+    <script type='text/javascript' src='frontend.js'></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="resources/bootstrap.css">
+    <style>
+        .main {
+            width: 1980px;
+            margin-left: 20px;
+        }
+        
+        p {
+            margin: 0;
+            color: white;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        }
+        
+        .table {
+            background-color: green;
+            height: 500px;
+            width: 40%;
+            border-radius: 40%;
+            margin: 0 auto;
+            margin-top: 100px;
+            margin-left: 100px;
+            float:left;
+            border: 1em solid black;
+        }
+        
+        .board {
+            position: relative;
+            top: 35%;
+            left: 30%;
+            display: grid;
+            height: 0px;
+        }
+
+        #pot {
+            width: 40%;
+            height: 0px;
+            text-align: center;
+        }
+        
+        .card-small {
+            border: .2em solid black;
+            border-radius: 10%;
+            height: 90px;
+            width: 56px;
+            margin-right: 5px;
+            float: left;
+            background-color: white;
+        }
+
+        .card-small>p {
+            color: black;
+            text-shadow: none;
+        }
+        
+        .card-text {
+            margin: 0;
+            /*margin-top: 15%;*/
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 0;
+        }
+        
+        .card-img {
+            text-align: center;
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        .player {
+            position: relative;
+            display: flex;
+            width: fit-content;
+            height: 0px;
+        }
+        
+        #player0 {
+            left: -15%;
+            top: 67%;
+            flex-direction: column-reverse;
+        }
+        
+        #player1 {
+            left: 5%;
+            top: 20%;
+            flex-direction: column-reverse;
+        }
+        
+        #player2 {
+            left: 42%;
+            top: 12%;
+            flex-direction: column-reverse;
+        }
+        
+        #player3 {
+            left: 80%;
+            top: 20%;
+            flex-direction: column-reverse;
+        }
+        
+        #player4 {
+            left: 100%;
+            top: 67%;
+            flex-direction: column-reverse;
+        }
+        
+        #player5 {
+            left: 80%;
+            top: 125%;
+            flex-direction: column-reverse;
+        }
+        
+        #player6 {
+            left: 42%;
+            top: 130%;
+            flex-direction: column-reverse;
+        }
+        
+        #player7 {
+            left: 5%;
+            top: 125%;
+            flex-direction: column-reverse;
+        }
+        
+        .action {
+            position: relative;
+            width: fit-content;
+            height: 0px;
+        }
+
+        #action0 {
+            left: 5%;
+            top: 50%;
+        }
+
+        #action1 {
+            left: 15%;
+            top: 25%;
+        }
+
+        #action2 {
+            left: 48%;
+            top: 20%;
+        }
+
+        #action3 {
+            left: 80%;
+            top: 25%;
+        }
+
+        #action4 {
+            left: 90%;
+            top: 50%;
+        }
+
+        #action5 {
+            left: 80%;
+            top: 80%;
+        }
+
+        #action6 {
+            left: 48%;
+            top: 85%;
+        }
+
+        #action7 {
+            left: 15%;
+            top: 80%;
+        }
+
+        .botton {
+            position: absolute;
+            height: 40px;
+        }
+
+        #botton0 {
+            top: 250px;
+            left: 140px;
+        }
+
+        #botton1 {
+            top: 140px;
+            left: 290px;
+        }
+
+        #botton2 {
+            top: 115px;
+            left: 560px;
+        }
+
+        #botton3 {
+            top: 140px;
+            left: 710px;
+        }
+
+        #botton4 {
+            top: 350px;
+            left: 860px;
+        }
+
+        #botton5 {
+            top: 510px;
+            left: 715px;
+        }
+
+        #botton6 {
+            top: 520px;
+            left: 430px;
+        }
+
+        #botton7 {
+            top: 510px;
+            left: 290px;
+        }
+        .actions {            
+            margin: 0 auto;
+            margin-top: 100px;
+            float:right;
+            margin-right: 300px;
+            border: 1em gray;
+        }
+        h1 {
+            font-family: sans-serif;
+            font-size: 32px;
+            color: #CCC;
+            padding: 5px;
+            margin: 5px;
+        }
+        ul {
+            padding: 0;
+            width: 500px;
+            margin: 10px;
+            max-height: 500px;
+            overflow:auto;           
+            
+        }
+        li {
+            font-family: sans-serif;
+            background-color:white;
+            float: left;
+            clear: both;
+            padding: 5px;
+            list-style-type: none;
+            margin: 10px;
+            border-radius: 5px;
+            bottom: 0;
+        }
+
+
+        .red {
+            color: red;
+        }
+        
+        .black {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="main">
+
+            <div id="table" class="table">
+
+                <div class="board">
+                    <div id="community"></div>
+                    <div><p id="pot">Pot: 0$</p></div>
+                    
+                </div>
+                <img class="botton" id="botton0" src="D.svg">
+            </div>
+            <div id="actions" class="actions">
+                <div>
+                    <h1>Actions</h1>                    
+                    <div id="action-list"><ul></ul></div>                                 
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

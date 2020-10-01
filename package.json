@@ -1,0 +1,34 @@
+{
+    "name": "poker-arena",
+    "version": "1.0.0",
+    "description": "- Use [machine-poker](https://www.npmjs.com/package/machine-poker) as a poker engine\r    - Setup an observer to send websocket events.\r  - Make a front-end app in vue.js / Angular\r    - Make it initate a poker table and listen to websocket events\r      - On new events change the view\r    - Make it possible for users to add their JS based bots",
+    "main": "poker.js",
+    "scripts": {
+        "test": "node ./node_modules/mocha/bin/_mocha",
+        "postinstall": "cd MachinePoker-master && npm install",
+        "start": "node poker.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VirtualSatai/poker-arena.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/VirtualSatai/poker-arena/issues"
+    },
+    "homepage": "https://github.com/VirtualSatai/poker-arena#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-ws": "^4.0.0",
+        "machine-poker": "file:MachinePoker-master",
+        "poker-odds-calculator": "^0.3.1",
+        "pokersolver": "^2.1.4"
+    },
+    "devDependencies": {
+        "async": "^3.2.0",
+        "mocha": "^1.14.0",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.5"
+    }
+}
