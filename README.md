@@ -10,3 +10,5 @@
 
 - recommended
     - install Visual Studio Code
+
+please don't start writing your bot before the event
